@@ -9,7 +9,7 @@ interface Seccion {
 
 export default function TrayectoriaCards() {
   return (
-    <div className="mt-20 lg:grid lg:px-10 xl:px-40 md:mx-20 px-6 grid-cols-3 gap-4">
+    <div className="mt-9 lg:grid lg:px-10 xl:px-40 md:mx-20 px-6 grid-cols-3 gap-4">
       {info.map((s) => {
         return (
           <div

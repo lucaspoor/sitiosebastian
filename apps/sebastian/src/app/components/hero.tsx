@@ -5,20 +5,6 @@ export default function Hero() {
   return (
     <div className="lg:mx-80  ">
       <Image
-        src="/images/votaA10.png"
-        width={100}
-        height={100}
-        alt="Picture of the author"
-        className="fixed top-0 z-50 right-8 "
-      />
-      <Image
-        src="/images/bannernombre.png"
-        width={500}
-        height={200}
-        alt="Picture of the author"
-        className="pt-16 m-auto"
-      />
-      <Image
         src="/images/fotosebastian.png"
         width={500}
         height={500}

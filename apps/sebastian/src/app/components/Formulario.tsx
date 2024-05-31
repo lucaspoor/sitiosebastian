@@ -42,61 +42,77 @@ export function Formulario() {
       });
   };
   return (
-    <div className="bg-orange-100 max-w-600 mt-20 mx-40 p-10">
-      <Formik
-        initialValues={{ email: '', message: '', nombre: '' }}
-        onSubmit={handleOnSubmit}
-        validationSchema={formSchema}
-      >
-        {({ isSubmitting, errors, touched }) => (
-          <Form id="fs-frm" noValidate className="flex flex-col gap-5">
-            <div>
-              <label htmlFor="nombre">Nombre:</label>
-              <Field id="nombre" type="nombre" name="nombre" />
-              {errors.nombre && touched.nombre && (
-                <ErrorMessage
+    <div className="border-gray-400 border-2 shadow-lg shadow-gray-400 rounded-lg max-w-600 mt-12 lg:mx-40  m-6">
+      <div className="border-b-2 p-7 py-4 font-semibold text-2xl text-gray-700 border-gray-400  ">
+        Formulario
+      </div>
+      <div className="p-7">
+        <Formik
+          initialValues={{ email: '', message: '', nombre: '' }}
+          onSubmit={handleOnSubmit}
+          validationSchema={formSchema}
+        >
+          {({ isSubmitting, errors, touched }) => (
+            <Form id="fs-frm" noValidate className="flex flex-col gap-5">
+              <div className="flex flex-col">
+                <label
+                  htmlFor="nombre"
+                  className="text-gray-507  font-medium text-xl"
+                >
+                  Nombre
+                </label>
+                <Field
+                  id="nombre"
+                  className="p-2 mt-1 border-2 border-gray-400 rounded-md"
+                  type="nombre"
                   name="nombre"
-                  className="errorMsg"
-                  component="p"
                 />
+                {errors.nombre && touched.nombre && (
+                  <ErrorMessage
+                    name="nombre"
+                    className="errorMsg"
+                    component="p"
+                  />
+                )}
+              </div>
+              <div>
+                <label htmlFor="email">Email:</label>
+                <Field id="email" type="email" name="email" />
+                {errors.email && touched.email && (
+                  <ErrorMessage
+                    name="email"
+                    className="errorMsg"
+                    component="p"
+                  />
+                )}
+              </div>
+              <div>
+                <label htmlFor="message">Message:</label>
+                <Field id="message" type="message" name="message" />
+                {errors.message && touched.message && (
+                  <ErrorMessage
+                    name="message"
+                    className="errorMsg"
+                    component="p"
+                  />
+                )}
+              </div>
+              <button
+                className="bg-blueprimary py-4 px-10 text-white text-lg font-medium"
+                type="submit"
+                disabled={isSubmitting}
+              >
+                Enviar Formulario
+              </button>
+              {serverState && (
+                <p className={!serverState.ok ? 'errorMsg' : ''}>
+                  {serverState.msg}
+                </p>
               )}
-            </div>
-
-            <div>
-              <label htmlFor="email">Email:</label>
-              <Field id="email" type="email" name="email" />
-              {errors.email && touched.email && (
-                <ErrorMessage name="email" className="errorMsg" component="p" />
-              )}
-            </div>
-
-            <div>
-              <label htmlFor="message">Message:</label>
-              <Field id="message" type="message" name="message" />
-              {errors.message && touched.message && (
-                <ErrorMessage
-                  name="message"
-                  className="errorMsg"
-                  component="p"
-                />
-              )}
-            </div>
-
-            <button
-              className="bg-blue-900 py-4 px-10 text-white"
-              type="submit"
-              disabled={isSubmitting}
-            >
-              Submit
-            </button>
-            {serverState && (
-              <p className={!serverState.ok ? 'errorMsg' : ''}>
-                {serverState.msg}
-              </p>
-            )}
-          </Form>
-        )}
-      </Formik>
+            </Form>
+          )}
+        </Formik>
+      </div>
     </div>
   );
 }
