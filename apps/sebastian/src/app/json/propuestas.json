@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "titulo": "1. Empleo y Pymes",
+    "texto": "  Buscamos reactivar el empleo y la economía comunal, invirtiendo en  turismo, construcción y nuevos sectores como tecnología, energías renovables y salud. Se fortalecerá la economía rural y se transformará el centro de negocios en un Hub para emprendedores."
+  },
+  {
+    "id": 2,
+    "titulo": "2. Vialidad e Infraestructura",
+    "texto": " Profesor en ITUR y sede UFRO Pucón, así como en diversas universidades de Chile y el extranjero durante más de 20 años en  asignaturas como Marketing, Investigación de Mercado, Liderazgo y Trabajo en Equipo. Además, soy locutor radial en Radio El Conquistador en programascomo: La Ruta del Conquistador y Chile Crece junto a Nicolás Larraín    "
+  },
+  {
+    "id": 3,
+    "titulo": "3. Medioambiente",
+    "texto": " La política comunal busca preservar el entorno y recursos naturales de Pucón, implementar un plan de descontaminación, liderar la transición energética y minimizar la contaminación del aire. Se creará una unidad de Seguridad Ciudadana del Medio Ambiente e instalarán nuevos Puntos Limpios.    "
+  },
+  {
+    "id": 4,
+    "titulo": "4. Educación y Salud",
+    "texto": "   El plan de adecuación de infraestructura incluye la construcción de un nuevo liceo de hotelería y turismo, y la ampliación de la escuela de Carhuello. En salud, se desarrollará un programa piloto para adultos mayores y se fortalecerán los consultorios rurales y CESFAM."
+  },
+  {
+    "id": 5,
+    "titulo": "5. Seguridad Pública",
+    "texto": "  El plan integrado de seguridad busca frenar la delincuencia y el narcotráfico, mejorando la infraestructura y creando unidades de vigilancia. Además, se implementan medidas para la seguridad    vulcanológica, incluyendo limpieza de cuencas y ríos, y protocolos de seguridad para el volcán Villarrica."
+  },
+  {
+    "id": 6,
+    "titulo": "6. Vivienda Social",
+    "texto": "  El Plan de Ordenamiento Territorial incluye un programa paraconstruir viviendas sociales, mediante la identificación de demanda, visualización de terrenos disponibles, adquisición de tierras y su urbanización para alojar a los comités comunales."
+  }
+]
