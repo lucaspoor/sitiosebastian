@@ -9,17 +9,23 @@ interface Seccion {
 
 export default function TrayectoriaCards() {
   return (
-    <div className="mt-1">
+    <div className="mt-20 lg:grid lg:px-10 xl:px-40 md:mx-20 px-6 grid-cols-3 gap-4">
       {info.map((s) => {
         return (
           <div
             aria-label="cardtrayectoria "
-            className="mt-7 border-2 lg:flex lg:inline-block rounded-lg border-gray-200 shadow-xl"
+            className="mt-7 border-2 rounded-lg border-gray-200 shadow-xl"
           >
             <Image
               src={s.image}
               width={500}
               height={280}
+              style={{
+                width: '100%',
+                display: 'block',
+                maxHeight: '100vh',
+                objectFit: 'cover',
+              }}
               alt="Picture of the author"
               className="rounded-t-lg"
             />
