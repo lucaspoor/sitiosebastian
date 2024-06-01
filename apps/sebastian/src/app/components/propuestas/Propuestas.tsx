@@ -6,8 +6,13 @@ import { Propuesta } from './Propuesta';
 export default function PropuestasCards() {
   const propuestas = info as Array<Propuesta>;
   return (
-    <div>
-      <div className="mt-1 lg:grid lg:px-10 xl:px-40 md:mx-20 px-6 grid-cols-3 gap-4">
+    <div className="m-4">
+      <div className="flex mt-12 lg:mt-44">
+        <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
+          Propuestas Principales
+        </h1>
+      </div>
+      <div className="grid lg:grid-cols-3 gap-4">
         {propuestas.map((p) => (
           <CardPropuestaV2 propuesta={p} key={p.id} />
         ))}
