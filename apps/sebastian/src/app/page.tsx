@@ -32,21 +32,13 @@ export default function Index() {
       </div>
       <Hero></Hero>
 
-      <div className="">
-        <Video></Video>
+      <div className="mb-24 mt-10">
+        <Video />
       </div>
 
       <SeccionTrayectoria />
       <SeccionPropuestas />
-      <div className="">
-        <div className="w-100 justify-center flex mt-24 lg:mt-44 ">
-          <h1 className="font-arial font-bold text-3xl lg:text-4xl text-blueprimary">
-            ¡Ponte en contacto!
-          </h1>
-          <p></p>
-        </div>
-        <Formulario />
-      </div>
+      <Formulario />
       <FooterTest></FooterTest>
     </>
   );

@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Video from './VIdeo';
 
 export default function Hero() {
   return (
