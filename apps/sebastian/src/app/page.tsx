@@ -41,29 +41,30 @@ export default function Index() {
 
       <div className="">
         <div className="w-100 justify-center flex mt-12">
-          <h1 className="font-arial font-bold text-2xl lg:text-4xl text-redprimary">
+          <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
             Conoce al Candidato
           </h1>
         </div>
         <Video></Video>
       </div>
       <div className="w-100 justify-center flex mt-12 lg:mt-44">
-        <h1 className="font-arial font-bold text-2xl lg:text-4xl mt-16 text-blueprimary">
+        <h1 className="font-arial font-bold text-3xl lg:text-4xl mt-16 text-blueprimary">
           Trayectoria de Sebastián
         </h1>
       </div>
       <TrayectoriaCards></TrayectoriaCards>
       <div className="w-100 justify-center flex mt-12 lg:mt-44">
-        <h1 className="font-arial font-bold text-2xl lg:text-4xl text-redprimary">
-          Conoce al Candidato
+        <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
+          Propuestas Principales
         </h1>
       </div>
       <PropuestasCards></PropuestasCards>
       <div className="">
-        <div className="w-100 justify-center flex mt-24 lg:mt-44">
+        <div className="w-100 justify-center flex mt-24 lg:mt-44 ">
           <h1 className="font-arial font-bold text-3xl lg:text-4xl text-blueprimary">
-            Contáctanos
+            ¡Ponte en contacto!
           </h1>
+          <p></p>
         </div>
         <Formulario />
       </div>

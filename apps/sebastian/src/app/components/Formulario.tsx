@@ -6,9 +6,11 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 
 const formSchema = Yup.object().shape({
-  email: Yup.string().email('Invalid email').required('Required'),
-  message: Yup.string().required('Required'),
-  nombre: Yup.string().required('Required'),
+  email: Yup.string()
+    .email('Debes ingresar un email válido')
+    .required('Debes ingresar un email válido'),
+  message: Yup.string().required('No hay ningun mensaje'),
+  nombre: Yup.string().required('Debes ingresar tu nombre'),
 });
 
 export function Formulario() {
@@ -53,52 +55,75 @@ export function Formulario() {
           validationSchema={formSchema}
         >
           {({ isSubmitting, errors, touched }) => (
-            <Form id="fs-frm" noValidate className="flex flex-col gap-5">
+            <Form id="fs-frm" noValidate className="">
               <div className="flex flex-col">
                 <label
                   htmlFor="nombre"
-                  className="text-gray-507  font-medium text-xl"
+                  className="text-gray-600  font-medium text-xl"
                 >
                   Nombre
                 </label>
                 <Field
                   id="nombre"
-                  className="p-2 mt-1 border-2 border-gray-400 rounded-md"
+                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
                   type="nombre"
                   name="nombre"
+                  placeholder="Ej: Juan Perez"
                 />
                 {errors.nombre && touched.nombre && (
                   <ErrorMessage
                     name="nombre"
-                    className="errorMsg"
+                    className="text-redprimary 600 mt-2"
                     component="p"
                   />
                 )}
               </div>
-              <div>
-                <label htmlFor="email">Email:</label>
-                <Field id="email" type="email" name="email" />
+              <div className="flex flex-col">
+                <label
+                  htmlFor="email"
+                  className="text-gray-600 mt-2  font-medium text-xl"
+                >
+                  Email:
+                </label>
+                <Field
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Ej: carlos123@gmail.com"
+                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                />
                 {errors.email && touched.email && (
                   <ErrorMessage
                     name="email"
-                    className="errorMsg"
+                    className="text-redprimary 600 mt-2"
                     component="p"
                   />
                 )}
               </div>
-              <div>
-                <label htmlFor="message">Message:</label>
-                <Field id="message" type="message" name="message" />
+              <div className="flex flex-col">
+                <label
+                  htmlFor="message"
+                  className="text-gray-600 mt-2 font-medium text-xl"
+                >
+                  Message:
+                </label>
+                <Field
+                  id="message"
+                  type="message"
+                  placeholder="Ej: Hola buen dia, me gustaria decir..."
+                  name="message"
+                  className="p-2 pb-16 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                />
                 {errors.message && touched.message && (
                   <ErrorMessage
                     name="message"
-                    className="errorMsg"
+                    className="text-redprimary 600 mt-2"
                     component="p"
                   />
                 )}
               </div>
               <button
-                className="bg-blueprimary py-4 px-10 text-white text-lg font-medium"
+                className="bg-blueprimary mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg font-medium"
                 type="submit"
                 disabled={isSubmitting}
               >
