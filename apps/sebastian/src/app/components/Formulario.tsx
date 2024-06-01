@@ -44,99 +44,101 @@ export function Formulario() {
       });
   };
   return (
-    <div className="border-gray-400 border-2 shadow-lg shadow-gray-400 rounded-lg max-w-600 mt-12 lg:mx-40  m-6">
-      <div className="border-b-2 p-7 py-4 font-semibold text-2xl text-gray-700 border-gray-400  ">
-        Formulario
-      </div>
-      <div className="p-7">
-        <Formik
-          initialValues={{ email: '', message: '', nombre: '' }}
-          onSubmit={handleOnSubmit}
-          validationSchema={formSchema}
-        >
-          {({ isSubmitting, errors, touched }) => (
-            <Form id="fs-frm" noValidate className="">
-              <div className="flex flex-col">
-                <label
-                  htmlFor="nombre"
-                  className="text-gray-600  font-medium text-xl"
-                >
-                  Nombre
-                </label>
-                <Field
-                  id="nombre"
-                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                  type="nombre"
-                  name="nombre"
-                  placeholder="Ej: Juan Perez"
-                />
-                {errors.nombre && touched.nombre && (
-                  <ErrorMessage
+    <div className="w-100 flex justify-center">
+      <div className="border-gray-400 border-2 shadow-lg shadow-gray-400 rounded-lg  mt-12 lg:w-5/12  md:m-28 m-6 w-96">
+        <div className="border-b-2 p-7 py-4 font-semibold text-2xl text-gray-700 border-gray-400  ">
+          Formulario
+        </div>
+        <div className="p-7">
+          <Formik
+            initialValues={{ email: '', message: '', nombre: '' }}
+            onSubmit={handleOnSubmit}
+            validationSchema={formSchema}
+          >
+            {({ isSubmitting, errors, touched }) => (
+              <Form id="fs-frm" noValidate className="">
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="nombre"
+                    className="text-gray-600  font-medium text-xl"
+                  >
+                    Nombre
+                  </label>
+                  <Field
+                    id="nombre"
+                    className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                    type="nombre"
                     name="nombre"
-                    className="text-redprimary 600 mt-2"
-                    component="p"
+                    placeholder="Ej: Juan Perez"
                   />
-                )}
-              </div>
-              <div className="flex flex-col">
-                <label
-                  htmlFor="email"
-                  className="text-gray-600 mt-2  font-medium text-xl"
-                >
-                  Email:
-                </label>
-                <Field
-                  id="email"
-                  type="email"
-                  name="email"
-                  placeholder="Ej: carlos123@gmail.com"
-                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                />
-                {errors.email && touched.email && (
-                  <ErrorMessage
+                  {errors.nombre && touched.nombre && (
+                    <ErrorMessage
+                      name="nombre"
+                      className="text-redprimary 600 mt-2"
+                      component="p"
+                    />
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="email"
+                    className="text-gray-600 mt-2  font-medium text-xl"
+                  >
+                    Email:
+                  </label>
+                  <Field
+                    id="email"
+                    type="email"
                     name="email"
-                    className="text-redprimary 600 mt-2"
-                    component="p"
+                    placeholder="Ej: carlos123@gmail.com"
+                    className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
                   />
-                )}
-              </div>
-              <div className="flex flex-col">
-                <label
-                  htmlFor="message"
-                  className="text-gray-600 mt-2 font-medium text-xl"
-                >
-                  Message:
-                </label>
-                <Field
-                  id="message"
-                  type="message"
-                  placeholder="Ej: Hola buen dia, me gustaria decir..."
-                  name="message"
-                  className="p-2 pb-16 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                />
-                {errors.message && touched.message && (
-                  <ErrorMessage
+                  {errors.email && touched.email && (
+                    <ErrorMessage
+                      name="email"
+                      className="text-redprimary 600 mt-2"
+                      component="p"
+                    />
+                  )}
+                </div>
+                <div className="flex flex-col">
+                  <label
+                    htmlFor="message"
+                    className="text-gray-600 mt-2 font-medium text-xl"
+                  >
+                    Message:
+                  </label>
+                  <Field
+                    id="message"
+                    type="message"
+                    placeholder="Ej: Hola buen dia, me gustaria decir..."
                     name="message"
-                    className="text-redprimary 600 mt-2"
-                    component="p"
+                    className="p-2 pb-16 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
                   />
+                  {errors.message && touched.message && (
+                    <ErrorMessage
+                      name="message"
+                      className="text-redprimary 600 mt-2"
+                      component="p"
+                    />
+                  )}
+                </div>
+                <button
+                  className="bg-blueprimary mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg font-medium"
+                  type="submit"
+                  disabled={isSubmitting}
+                >
+                  Enviar Formulario
+                </button>
+                {serverState && (
+                  <p className={!serverState.ok ? 'errorMsg' : ''}>
+                    {serverState.msg}
+                  </p>
                 )}
-              </div>
-              <button
-                className="bg-blueprimary mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg font-medium"
-                type="submit"
-                disabled={isSubmitting}
-              >
-                Enviar Formulario
-              </button>
-              {serverState && (
-                <p className={!serverState.ok ? 'errorMsg' : ''}>
-                  {serverState.msg}
-                </p>
-              )}
-            </Form>
-          )}
-        </Formik>
+              </Form>
+            )}
+          </Formik>
+        </div>
       </div>
     </div>
   );
