@@ -13,7 +13,7 @@ export default function FooterTest() {
         />
         <div className="max-w-3xl mx-auto">
           <a href="https://pagedone.io/" className="flex justify-center "></a>
-          <ul className="text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
+          <ul className="hidden text-lg flex items-center justify-center flex-col gap-7 md:flex-row md:gap-12 transition-all duration-500 py-16 mb-10 border-b border-gray-200">
             <li>
               <a href="#" className="text-white hover:text-gray-900">
                 Pagedone
@@ -40,7 +40,7 @@ export default function FooterTest() {
               </a>
             </li>
           </ul>
-          <div className="flex space-x-10 justify-center items-center mb-14">
+          <div className="mt-10 flex space-x-10 justify-center items-center mb-14">
             <a
               href="#"
               className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
