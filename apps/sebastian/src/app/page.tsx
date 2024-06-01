@@ -7,7 +7,7 @@ config.autoAddCss = false;
 </svg>;
 import Footer from './components/Footer';
 import { Formulario } from './components/Formulario';
-import PropuestasCards from './components/Propuestas';
+import PropuestasCards from './components/propuestas/Propuestas';
 import TrayectoriaCards from './components/Trayectoria';
 import Video from './components/VIdeo';
 import Hero from './components/hero';

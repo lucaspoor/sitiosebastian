@@ -13,6 +13,7 @@ export default function TrayectoriaCards() {
       {info.map((s) => {
         return (
           <div
+            key={s.titulo}
             aria-label="cardtrayectoria "
             className="mt-7 border-2 rounded-lg border-gray-200 shadow-xl"
           >
