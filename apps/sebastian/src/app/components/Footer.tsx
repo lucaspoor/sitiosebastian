@@ -17,9 +17,10 @@ export default function Footer() {
           desarrollado por
         </p>{' '}
         <a
-          className="text-white text-lg underline font-semibold"
+          className="text-white text-lg pl-2 underline font-semibold"
           href="https://www.pooweb.cl/"
         >
+          {' '}
           Pooweb.cl
         </a>
       </div>

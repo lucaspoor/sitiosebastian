@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Video from './VIdeo';
 
 export default function Hero() {
   return (
-    <div className="lg:mx-80  ">
-      <Image
-        src="/images/fotosebastian.png"
-        width={500}
-        height={500}
-        alt="Picture of the author"
-        className="pt-10 m-auto "
-      />
+    <div className="lg:mx-20 bg-slate-100  ">
+      <div className="flex justify-center">
+        <Image
+          src="/images/fotosebastian.png"
+          width={500}
+          height={500}
+          alt="Picture of the author"
+          className="pt-10 lg:w-5/12 delay-300 duration-700 "
+        />
+      </div>
 
       <div className="flex justify-center">
         <Link
