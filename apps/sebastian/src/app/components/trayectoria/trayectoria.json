@@ -1,17 +1,19 @@
 [
   {
     "image": "trapolitica.png",
-
+    "id": 1,
     "titulo": "En la Política",
     "texto": "2008-2010:\nConcejal de Pucón\n2011-2014\nDirector Regional de Sernatur\n2018-2022:\nDiputado por la Región de la Araucanía"
   },
   {
+    "id": 2,
     "image": "traemprendedor.png",
     "titulo": "Como Emprendedor",
     "texto": "Publicista y gestor de negocios, con más de 30 años de experiencia en Chile y en el extranjero trabajando para empresas multinacionales como Philips y Beaumont Bennet. Desde el año 2000 como emprendedor en Pucón destacándome en negocios como imprenta Pucón, Market Factory y Secretos de Asador en Gastronomía."
   },
 
   {
+    "id": 3,
     "image": "traentrevista.png",
     "titulo": "En la Docencia y la Radio",
     "texto": " Profesor en ITUR y sede UFRO Pucón, así como en diversas universidades de Chile y el extranjero durante más de 20 años en asignaturas como Marketing, Investigación de Mercado, Liderazgo y Trabajo en Equipo. Además, soy locutor radial en Radio El Conquistador en programas como: La Ruta del Conquistador y Chile Crece junto a Nicolás Larraín."

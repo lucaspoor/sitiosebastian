@@ -4,7 +4,7 @@ import Video from './VIdeo';
 
 export default function Hero() {
   return (
-    <div className="lg:mx-20   ">
+    <div className="bg-blueprimary ">
       <div className="flex justify-center">
         <Image
           src="/images/fotosebastian.png"
