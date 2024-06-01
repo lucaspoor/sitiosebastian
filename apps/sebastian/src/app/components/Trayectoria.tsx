@@ -14,7 +14,7 @@ export default function TrayectoriaCards() {
         return (
           <div
             aria-label="cardtrayectoria "
-            className="mt-7 border-2 rounded-lg border-gray-200 shadow-xl animate-fade-up animate-once animate-duration-[4000ms]"
+            className="mt-7 border-2 rounded-lg border-gray-200 shadow-xl"
           >
             <Image
               src={s.image}
