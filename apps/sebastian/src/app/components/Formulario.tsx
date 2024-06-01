@@ -63,7 +63,7 @@ export function Formulario() {
         >
           {({ isSubmitting, errors, touched }) => (
             <Form id="fs-frm" noValidate className="">
-              <div className="flex flex-col">
+              <div className="flex flex-col mb-4">
                 <label htmlFor="nombre" className="text-gray-600 ">
                   Nombre
                 </label>
@@ -82,7 +82,7 @@ export function Formulario() {
                   />
                 )}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col mb-4">
                 <label htmlFor="email" className="text-gray-600 mt-2   ">
                   Email
                 </label>
@@ -101,11 +101,11 @@ export function Formulario() {
                   />
                 )}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col mb-4">
                 <MyTextArea label="Mensaje" name="message" rows="6" />
               </div>
               <button
-                className="bg-blueprimary rounded-md mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg "
+                className="bg-blueprimary rounded-md mb-20 lg:mb-40 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg "
                 type="submit"
                 disabled={isSubmitting}
               >
