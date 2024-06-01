@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "dev": "nx dev sebastian"
+    "dev": "nx dev sebastian",
+    "build": "nx build sebastian",
+    "start": "nx start sebastian"
   },
   "private": true,
   "dependencies": {
