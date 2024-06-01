@@ -35,11 +35,9 @@ export default function Index() {
 
       <div className="">
         <div className="w-100 justify-center flex mt-12">
-          <Animate>
-            <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
-              Conoce al Candidato
-            </h1>
-          </Animate>
+          <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
+            Conoce al Candidato
+          </h1>
         </div>
 
         <Video></Video>
