@@ -1,11 +1,9 @@
-import Footer from './components/Footer';
 import { Formulario } from './components/Formulario';
-import PropuestasCards from './components/propuestas/Propuestas';
-import TrayectoriaCards from './components/Trayectoria';
+import SeccionPropuestas from './components/propuestas/SeccionPropuestas';
+import SeccionTrayectoria from './components/trayectoria/SeccionTrayectoria';
 import Video from './components/VIdeo';
 import Hero from './components/hero';
 import Image from 'next/image';
-import Animate from './utils/scrollanimation';
 import FooterTest from './components/footertest';
 
 export default function Index() {
@@ -37,15 +35,9 @@ export default function Index() {
       <div className="">
         <Video></Video>
       </div>
-      <div className="w-100 justify-center flex mt-12 lg:mt-44">
-        <h1 className="font-arial font-bold text-3xl lg:text-4xl mt-16 text-blueprimary">
-          Trayectoria de Sebastián
-        </h1>
-      </div>
 
-      <TrayectoriaCards></TrayectoriaCards>
-
-      <PropuestasCards></PropuestasCards>
+      <SeccionTrayectoria />
+      <SeccionPropuestas />
       <div className="">
         <div className="w-100 justify-center flex mt-24 lg:mt-44 ">
           <h1 className="font-arial font-bold text-3xl lg:text-4xl text-blueprimary">

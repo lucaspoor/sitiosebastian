@@ -2,13 +2,15 @@
 import { Fade } from 'react-awesome-reveal';
 import Image from 'next/image';
 
-import { Propuesta } from './Propuesta';
+import { Item } from '../../types/Item';
 
-export function CardPropuestaV2({
-  propuesta: { id, texto, titulo, image },
-}: {
-  propuesta: Propuesta;
-}) {
+type ItemCardProps = {
+  item: Item;
+};
+
+export function ItemCard({
+  item: { id, texto, titulo, image },
+}: ItemCardProps) {
   return (
     <Fade duration={500} delay={500}>
       <div aria-label="cardtrayectoria " className="mb-8">
@@ -22,7 +24,13 @@ export function CardPropuestaV2({
             alt={titulo}
             className="mb-6"
           />
-          <p className="text-slate-500 text-base mt-2">{texto}</p>
+          <p className="text-slate-500 text-base mt-2">
+            {texto.split('\n').map((t) => (
+              <p className="mb-1" key={t}>
+                {t}
+              </p>
+            ))}
+          </p>
         </div>
       </div>
     </Fade>
