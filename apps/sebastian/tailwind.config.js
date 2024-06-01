@@ -14,6 +14,7 @@ module.exports = {
     extend: { colors: { redprimary: '#e30611', blueprimary: '#4b76ba' } },
     fontFamily: {
       arial: ['Arial'],
+      sans: ['ui-sans-serif'],
     },
   },
   plugins: [require('tailwindcss-animated')],

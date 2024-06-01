@@ -6,6 +6,7 @@ import Video from './components/VIdeo';
 import Hero from './components/hero';
 import Image from 'next/image';
 import Animate from './utils/scrollanimation';
+import FooterTest from './components/footertest';
 
 export default function Index() {
   return (
@@ -34,12 +35,6 @@ export default function Index() {
       <Hero></Hero>
 
       <div className="">
-        <div className="w-100 justify-center flex mt-12">
-          <h1 className="font-arial font-bold text-3xl lg:text-4xl text-redprimary">
-            Conoce al Candidato
-          </h1>
-        </div>
-
         <Video></Video>
       </div>
       <div className="w-100 justify-center flex mt-12 lg:mt-44">
@@ -60,7 +55,7 @@ export default function Index() {
         </div>
         <Formulario />
       </div>
-      <Footer></Footer>
+      <FooterTest></FooterTest>
     </>
   );
 }

@@ -45,7 +45,7 @@ export function Formulario() {
   };
   return (
     <div className="w-100 flex justify-center">
-      <div className="border-gray-400 border-2 shadow-lg shadow-gray-400 rounded-lg  mt-12 lg:w-5/12  md:m-28 m-6 w-96">
+      <div className="  shadow-gray-400 rounded-lg  mt-12 lg:w-5/12  md:m-28 m- w-96">
         <div className="border-b-2 p-7 py-4 font-semibold text-2xl text-gray-700 border-gray-400  ">
           Formulario
         </div>
