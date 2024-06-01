@@ -34,7 +34,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="#"
+            href="https://www.instagram.com/sebastianalvarez.cl/"
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
@@ -50,7 +50,7 @@ export default function Hero() {
             </svg>
           </a>
           <a
-            href="#"
+            href="https://www.facebook.com/profile.php?id=100057363343654"
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
