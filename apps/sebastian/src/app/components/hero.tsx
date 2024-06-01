@@ -4,25 +4,25 @@ import Video from './VIdeo';
 
 export default function Hero() {
   return (
-    <div className="bg-blueprimary ">
+    <div className="bg-[#282b6a] ">
       <div className="flex justify-center">
         <Image
           src="/images/fotosebastian.png"
           width={500}
           height={500}
           alt="Picture of the author"
-          className="pt-10 lg:w-5/12 animate-fade-up animate-once animate-duration-[2000ms]"
+          className="p-6 lg:w-5/12 animate-fade-up animate-once animate-duration-[2000ms]"
         />
       </div>
 
       <div className="flex justify-center flex-col">
-        <div className="flex space-x-10 justify-center items-center mb-14">
+        <div className="flex space-x-10 justify-center items-center mt-12">
           <a
             href="#"
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-[1.688rem] h-[1.688rem] text-redprimary"
+              className="w-12 h-12 text-white"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
               fill="none"
@@ -38,7 +38,7 @@ export default function Hero() {
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-[1.688rem] h-[1.688rem] text-redprimary "
+              className="w-12 h-12 text-white "
               viewBox="0 0 29 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@ export default function Hero() {
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-[0.938rem] h-[1.625rem] text-redprimary"
+              className="w-12 h-12 text-white"
               viewBox="0 0 15 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@ export default function Hero() {
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-[1.875rem] h-[1.375rem] text-redprimary"
+              className="w-12 h-12 text-white"
               viewBox="0 0 30 22"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -84,22 +84,25 @@ export default function Hero() {
             </svg>
           </a>
         </div>
-        <Link
-          href="#linkscroll"
-          className="p-2 rounded-lg px-14 mt-12  border-4 font-bold hover:bg-redprimary flex hover:text-white  border-redprimary font-arial text-blueprimary animate-fade-up animate-once animate-duration-[2000ms]"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="w-[1.5rem] h-[1.5rem] mr-2"
-            viewBox="0 0 384 512"
+
+        <div className="flex justify-center">
+          <Link
+            href="#linkscroll"
+            className=" w-60 p-4 my-14  border-4 font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
           >
-            <path
-              fill="#4b76ba"
-              d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"
-            />
-          </svg>
-          Bases del Programa
-        </Link>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-[1.5rem] h-[1.5rem] mr-2"
+              viewBox="0 0 384 512"
+            >
+              <path
+                fill="#4b76ba"
+                d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"
+              />
+            </svg>
+            Ver Programa de Gobierno
+          </Link>
+        </div>
       </div>
     </div>
   );

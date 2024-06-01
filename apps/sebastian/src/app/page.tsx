@@ -21,13 +21,13 @@ export default function Index() {
         className="fixed top-0 z-50 lg:w-32 md:w-32 right-8 lg:right-24 shadow-gray-700 shadow-md"
       />
 
-      <div className="w-100 bg-blueprimary flex m-0  justify-center mt-16 animate-fade animate-once animate-duration-[4000ms]">
+      <div className="w-100 bg-[#282b6a] flex m-0  justify-center pt-12 ">
         <Image
           src="/images/bannernombre.png"
           width={500}
           height={200}
           alt="Picture of the author"
-          className=" m-auto p-1 lg:w-2/5"
+          className=" m-auto p-1 lg:w-2/5 animate-fade animate-once animate-duration-[4000ms]"
         />
       </div>
       <Hero></Hero>
