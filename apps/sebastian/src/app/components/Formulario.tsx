@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Formik, Form, Field, ErrorMessage, useField } from 'formik';
 import * as Yup from 'yup';
 
 const formSchema = Yup.object().shape({
@@ -18,6 +18,7 @@ export function Formulario() {
   const [serverState, setServerState] = useState<any>();
   const handleServerResponse = (ok: any, msg: any) => {
     setServerState({ ok, msg });
+    setTimeout(() => setServerState(undefined), 3000);
   };
   const handleOnSubmit = (
     values: any,
@@ -32,7 +33,10 @@ export function Formulario() {
       .then((response) => {
         actions.setSubmitting(false);
         actions.resetForm();
-        handleServerResponse(true, 'Thanks!');
+        handleServerResponse(
+          true,
+          'Tu mensaje ha sido enviado, muchas gracias'
+        );
       })
       .catch((error) => {
         actions.setSubmitting(false);
@@ -44,102 +48,101 @@ export function Formulario() {
       });
   };
   return (
-    <div className="w-100 flex justify-center">
-      <div className="  shadow-gray-400 rounded-lg  mt-12 lg:w-5/12  md:m-28 m- w-96">
-        <div className="border-b-2 p-7 py-4 font-semibold text-2xl text-gray-700 border-gray-400  ">
-          Formulario
-        </div>
-        <div className="p-7">
-          <Formik
-            initialValues={{ email: '', message: '', nombre: '' }}
-            onSubmit={handleOnSubmit}
-            validationSchema={formSchema}
-          >
-            {({ isSubmitting, errors, touched }) => (
-              <Form id="fs-frm" noValidate className="">
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="nombre"
-                    className="text-gray-600  font-medium text-xl"
-                  >
-                    Nombre
-                  </label>
-                  <Field
-                    id="nombre"
-                    className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                    type="nombre"
+    <div className="max-w-[1200px] m-4 lg:m-auto">
+      <div className="flex lg:mt-22 mt-10">
+        <h1 className="mb-6 font-arial font-bold text-3xl lg:text-4xl text-redprimary">
+          Queremos escucharte
+        </h1>
+      </div>
+
+      <div>
+        <Formik
+          initialValues={{ email: '', message: '', nombre: '' }}
+          onSubmit={handleOnSubmit}
+          validationSchema={formSchema}
+        >
+          {({ isSubmitting, errors, touched }) => (
+            <Form id="fs-frm" noValidate className="">
+              <div className="flex flex-col">
+                <label htmlFor="nombre" className="text-gray-600 ">
+                  Nombre
+                </label>
+                <Field
+                  id="nombre"
+                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                  type="nombre"
+                  name="nombre"
+                  placeholder="Ej: Juan Perez"
+                />
+                {errors.nombre && touched.nombre && (
+                  <ErrorMessage
                     name="nombre"
-                    placeholder="Ej: Juan Perez"
+                    className="text-redprimary 600 mt-2"
+                    component="p"
                   />
-                  {errors.nombre && touched.nombre && (
-                    <ErrorMessage
-                      name="nombre"
-                      className="text-redprimary 600 mt-2"
-                      component="p"
-                    />
-                  )}
-                </div>
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="email"
-                    className="text-gray-600 mt-2  font-medium text-xl"
-                  >
-                    Email:
-                  </label>
-                  <Field
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="Ej: carlos123@gmail.com"
-                    className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                  />
-                  {errors.email && touched.email && (
-                    <ErrorMessage
-                      name="email"
-                      className="text-redprimary 600 mt-2"
-                      component="p"
-                    />
-                  )}
-                </div>
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="message"
-                    className="text-gray-600 mt-2 font-medium text-xl"
-                  >
-                    Message:
-                  </label>
-                  <Field
-                    id="message"
-                    type="message"
-                    placeholder="Ej: Hola buen dia, me gustaria decir..."
-                    name="message"
-                    className="p-2 pb-16 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
-                  />
-                  {errors.message && touched.message && (
-                    <ErrorMessage
-                      name="message"
-                      className="text-redprimary 600 mt-2"
-                      component="p"
-                    />
-                  )}
-                </div>
-                <button
-                  className="bg-blueprimary mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg font-medium"
-                  type="submit"
-                  disabled={isSubmitting}
-                >
-                  Enviar Formulario
-                </button>
-                {serverState && (
-                  <p className={!serverState.ok ? 'errorMsg' : ''}>
-                    {serverState.msg}
-                  </p>
                 )}
-              </Form>
-            )}
-          </Formik>
-        </div>
+              </div>
+              <div className="flex flex-col">
+                <label htmlFor="email" className="text-gray-600 mt-2   ">
+                  Email
+                </label>
+                <Field
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Ej: carlos123@gmail.com"
+                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                />
+                {errors.email && touched.email && (
+                  <ErrorMessage
+                    name="email"
+                    className="text-redprimary 600 mt-2"
+                    component="p"
+                  />
+                )}
+              </div>
+              <div className="flex flex-col">
+                <MyTextArea label="Mensaje" name="message" rows="6" />
+              </div>
+              <button
+                className="bg-blueprimary rounded-md mb-10 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg "
+                type="submit"
+                disabled={isSubmitting}
+              >
+                Enviar Formulario
+              </button>
+              {serverState && (
+                <p
+                  className={`border-2 border-green-600 p-4  bg-green-200 text-green-900 my-4 mb-10 {serverState.ok ? '' : 'errorMsg'}`}
+                >
+                  {serverState.msg}
+                </p>
+              )}
+            </Form>
+          )}
+        </Formik>
       </div>
     </div>
   );
 }
+
+const MyTextArea = ({ label, ...props }: any) => {
+  // useField() returns [formik.getFieldProps(), formik.getFieldMeta()]
+  // which we can spread on <input> and alse replace ErrorMessage entirely.
+  const [field, meta] = useField(props);
+  return (
+    <>
+      <label className="text-gray-600 mt-2   " htmlFor={props.id || props.name}>
+        {label}
+      </label>
+      <textarea
+        className=" p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md text-area"
+        {...field}
+        {...props}
+      />
+      {meta.touched && meta.error ? (
+        <div className="text-redprimary 600 mt-2">{meta.error}</div>
+      ) : null}
+    </>
+  );
+};
