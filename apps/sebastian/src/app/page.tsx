@@ -9,9 +9,8 @@ import FooterTest from './components/footertest';
 export default function Index() {
   return (
     <>
-      <div className="sticky z-50 top-0 font-semibold lg:text-xl bg-redprimary w-100 shadow-slate-800 shadow-md text-white lg:pl-14  lg:p-2 p-1  pl-7 h-8 lg:h-10">
-        <i className="fa fa-instagram" aria-hidden="true"></i>
-        @sebastianalvarez.cl
+      <div className="sticky z-50 top-0 font-semibold  lg:text-xl bg-redprimary w-100 shadow-slate-800 shadow-md text-white lg:pl-14  lg:p-2 p-1  pl-7 h-8 lg:h-10">
+        <a href="#">@sebastianalvarez.cl</a>
       </div>
       <Image
         src="/images/votaA10.png"
@@ -21,7 +20,7 @@ export default function Index() {
         className="fixed top-0 z-50 lg:w-32 md:w-32 right-8 lg:right-24 shadow-gray-700 shadow-md"
       />
 
-      <div className="w-100 bg-[#282b6a] flex m-0  justify-center pt-12 ">
+      <div className="w-100  bg-[#282b6a] flex m-0  justify-center pt-12 ">
         <Image
           src="/images/bannernombre.png"
           width={500}

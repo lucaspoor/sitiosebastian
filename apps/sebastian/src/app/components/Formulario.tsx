@@ -105,7 +105,7 @@ export function Formulario() {
                 <MyTextArea label="Mensaje" name="message" rows="6" />
               </div>
               <button
-                className="bg-blueprimary rounded-md mb-20 lg:mb-40 hover:text-blue-600 hover:bg-blue-600  mt-8 py-4 px-10 text-white text-lg "
+                className="bg-blueprimary transition ease-in-out delay-75     duration-300  rounded-md mb-20 lg:mb-40 hover:text-blueprimary hover:bg-white hover:border-blueprimary hover:border-4  mt-8 py-4 px-10 text-white text-lg "
                 type="submit"
                 disabled={isSubmitting}
               >

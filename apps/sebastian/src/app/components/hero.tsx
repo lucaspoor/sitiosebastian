@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function Hero() {
   return (
-    <div className="bg-[#282b6a] ">
+    <div className="bg-[#282b6a]  ">
       <div className="flex justify-center">
         <Image
           src="/images/fotosebastian.png"
@@ -15,29 +15,13 @@ export default function Hero() {
       </div>
 
       <div className="flex justify-center flex-col">
-        <div className="flex space-x-10 justify-center items-center mt-12">
-          <a
-            href="#"
-            className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
-          >
-            <svg
-              className="w-12 h-12 text-white"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="none"
-            >
-              <path
-                d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
+        <div className="flex space-x-10 justify-center items-center mt-6 animate-fade animate-once animate-duration-[2000ms]">
           <a
             href="https://www.instagram.com/sebastianalvarez.cl/"
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-12 h-12 text-white "
+              className="w-12 h-12 lg:w-20 lg:h-20 text-white hover:text-redprimary "
               viewBox="0 0 29 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +37,7 @@ export default function Hero() {
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-12 h-12 text-white"
+              className="w-12 h-12 lg:w-20 lg:h-20 text-white hover:text-redprimary"
               viewBox="0 0 15 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,30 +48,12 @@ export default function Hero() {
               />
             </svg>
           </a>
-          <a
-            href="#"
-            className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
-          >
-            <svg
-              className="w-12 h-12 text-white"
-              viewBox="0 0 30 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M26.3106 1.27838C27.5782 1.62071 28.5745 2.61957 28.9113 3.88573C29.524 6.18356 29.524 10.9809 29.524 10.9809C29.524 10.9809 29.524 15.7782 28.9113 18.076C28.5698 19.3469 27.5735 20.3457 26.3106 20.6834C24.0186 21.2977 14.8226 21.2977 14.8226 21.2977C14.8226 21.2977 5.63122 21.2977 3.33456 20.6834C2.06695 20.3411 1.07063 19.3422 0.73385 18.076C0.121094 15.7782 0.121094 10.9809 0.121094 10.9809C0.121094 10.9809 0.121094 6.18356 0.73385 3.88573C1.07531 2.61488 2.07162 1.61602 3.33456 1.27838C5.63122 0.664062 14.8226 0.664062 14.8226 0.664062C14.8226 0.664062 24.0186 0.664062 26.3106 1.27838ZM19.5234 10.9809L11.885 15.403V6.55872L19.5234 10.9809Z"
-                fill="currentColor"
-              />
-            </svg>
-          </a>
         </div>
 
         <div className="flex justify-center">
           <Link
-            href="#linkscroll"
-            className=" w-60 p-4 my-14  border-4 font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
+            href="/programa.pdf"
+            className="transition ease-in-out delay-75   hover:scale-110  duration-300 w-50 p-4 lg:px-8 my-14 transition-duration: 1000ms;  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
