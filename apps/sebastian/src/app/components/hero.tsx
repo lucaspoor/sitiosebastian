@@ -15,13 +15,13 @@ export default function Hero() {
       </div>
 
       <div className="flex justify-center flex-col">
-        <div className="flex space-x-10 justify-center items-center mt-6 animate-fade animate-once animate-duration-[2000ms]">
+        <div className="flex space-x-10 justify-center items-center mt-4  lg:mt-6 animate-fade animate-once animate-duration-[2000ms]">
           <a
             href="https://www.instagram.com/sebastianalvarez.cl/"
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-12 h-12 lg:w-20 lg:h-20 text-white hover:text-redprimary "
+              className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary "
               viewBox="0 0 29 29"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,7 @@ export default function Hero() {
             className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
-              className="w-12 h-12 lg:w-20 lg:h-20 text-white hover:text-redprimary"
+              className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary"
               viewBox="0 0 15 26"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="flex justify-center">
           <Link
             href="/programa.pdf"
-            className="transition ease-in-out delay-75   hover:scale-110  duration-300 w-50 p-4 lg:px-8 my-14 transition-duration: 1000ms;  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
+            className="transition ease-in-out delay-75   hover:scale-110  duration-300 w-50 p-4 lg:px-8 lg:my-14 my-12  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
