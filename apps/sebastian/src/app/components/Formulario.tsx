@@ -11,6 +11,9 @@ const formSchema = Yup.object().shape({
     .required('Debes ingresar un email válido'),
   message: Yup.string().required('No hay ningun mensaje'),
   nombre: Yup.string().required('Debes ingresar tu nombre'),
+  numero: Yup.number()
+    .typeError('Debes ingresar un numero válido')
+    .required('Debes ingresar un numero'),
 });
 
 export function Formulario() {
@@ -57,7 +60,7 @@ export function Formulario() {
 
       <div>
         <Formik
-          initialValues={{ email: '', message: '', nombre: '' }}
+          initialValues={{ email: '', message: '', nombre: '', numero: '' }}
           onSubmit={handleOnSubmit}
           validationSchema={formSchema}
         >
@@ -96,6 +99,25 @@ export function Formulario() {
                 {errors.email && touched.email && (
                   <ErrorMessage
                     name="email"
+                    className="text-redprimary 600 mt-2"
+                    component="p"
+                  />
+                )}
+              </div>
+              <div className="flex flex-col mb-4">
+                <label htmlFor="numero" className="text-gray-600 mt-2   ">
+                  Número telefónico
+                </label>
+                <Field
+                  id="numero"
+                  type="numero"
+                  name="numero"
+                  placeholder="Ej: 9 1234 5678"
+                  className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                />
+                {errors.numero && touched.numero && (
+                  <ErrorMessage
+                    name="numero"
                     className="text-redprimary 600 mt-2"
                     component="p"
                   />
