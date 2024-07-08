@@ -17,8 +17,8 @@ export default function Index() {
         </a>
       </div>
       <ClickToChat
-        numero="56961145578"
-        message="¡Hola! Queria hacer una consulta"
+        numero="+56992934365"
+        message="¡Hola! Cuéntanos en que te podemos ayudar"
       >
         {' '}
         <img
@@ -28,7 +28,7 @@ export default function Index() {
         ></img>
       </ClickToChat>
 
-      <div className="w-100  bg-[#282b6a] flex m-0  justify-center pt-8 ">
+      <div className="w-100  bg-[#282b6a] flex m-0  justify-center pt-4 ">
         <Image
           src="/images/bannernombre.png"
           width={500}

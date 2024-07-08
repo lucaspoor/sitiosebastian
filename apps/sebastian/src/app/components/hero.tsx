@@ -11,12 +11,12 @@ export default function Hero() {
           width={500}
           height={500}
           alt="Picture of the author"
-          className="p-6 lg:w-5/12 animate-fade-up animate-once animate-duration-[2000ms]"
+          className="p-6 pt-2 pb-0 lg:w-5/12 animate-fade-up animate-once animate-duration-[2000ms]"
         />
       </div>
 
       <div className="flex justify-center flex-col">
-        <div className="flex space-x-10 justify-center items-center mt-4  lg:mt-6 animate-fade animate-once animate-duration-[2000ms]">
+        <div className="flex space-x-10  justify-between mt-4 px-6 pb-4  lg:mt-6 animate-fade animate-once animate-duration-[2000ms]">
           <a
             href="https://www.instagram.com/sebastianalvarez.cl/"
             className="block px-1 text-gray-900 transition-all duration-500 hover:text-indigo-600 "
@@ -64,12 +64,40 @@ export default function Hero() {
               <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
             </svg>
           </a>
+          <a
+            href="tel:+56992934365"
+            className="block px-1 text-gray-900 transition-all duration-500 hover:text-indigo-600 "
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary"
+              viewBox="0 0 16 16"
+            >
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+            </svg>
+          </a>
         </div>
 
         <div className="flex flex-col mx-auto">
           <Link
+            href="#linkcontacto"
+            className="transition group ease-in-out delay-75  px-12    hover:scale-110  duration-300 w-50 p-4 lg:px-8 lg:my-14 lg:my-12 mt-4 border-4  rounded-3xl xl font-bold bg-white border-redprimary flex  text-redprimary font-arial  hover:bg-redprimary justify-center hover:border-redprimary  hover:text-white  animate-fade-up animate-once animate-duration-[2000ms]"
+          >
+            {/* <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-7 h-6 lg:w-20 lg:h-20 mr-2 text-redprimary group-hover:text-white duration-300 "
+              viewBox="0 0 16 16"
+            >
+              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+              <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg> */}
+            ¿Como te Ayudamos? Contáctanos
+          </Link>
+          <Link
             href="/programa.pdf"
-            className="transition ease-in-out delay-75 group px-12   hover:scale-110  duration-300 p-4  lg:px-8 lg:my-14 mt-12  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-redprimary hover:border-redprimary  hover:text-white flex justify-center border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
+            className="transition ease-in-out delay-75 group px-12 mb-16    hover:scale-110  duration-300 p-4  lg:px-8 lg:my-14 mt-4  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-redprimary hover:border-redprimary  hover:text-white flex justify-center border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,21 +111,6 @@ export default function Hero() {
               />
             </svg>
             Ver Programa de Gobierno
-          </Link>
-          <Link
-            href="#linkcontacto"
-            className="transition group ease-in-out delay-75  px-12    hover:scale-110  duration-300 w-50 p-4 lg:px-8 lg:my-14 lg:my-12 mt-4 mb-16  border-4  rounded-3xl xl font-bold bg-white border-redprimary flex text-redprimary font-arial  hover:bg-redprimary justify-center hover:border-redprimary  hover:text-white  animate-fade-up animate-once animate-duration-[2000ms]"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              className="w-7 h-6 lg:w-20 lg:h-20 mr-2 text-redprimary group-hover:text-white duration-300 "
-              viewBox="0 0 16 16"
-            >
-              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
-              <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
-            </svg>
-            ¿Como te Ayudamos?
           </Link>
         </div>
       </div>
