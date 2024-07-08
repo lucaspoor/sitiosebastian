@@ -12,7 +12,7 @@ export function ItemCard({
   item: { id, texto, titulo, image },
 }: ItemCardProps) {
   return (
-    <Fade duration={500} delay={500}>
+    <Fade duration={400} delay={200} triggerOnce>
       <div aria-label="cardtrayectoria " className="mb-8">
         <div className="">
           <h2 className="font-bold text-2xl mb-6 ">{titulo}</h2>

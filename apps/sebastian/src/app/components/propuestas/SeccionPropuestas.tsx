@@ -11,7 +11,9 @@ export default function SeccionPropuestas() {
           Propuestas Principales
         </h1>
       </div>
+
       <ItemsSection items={propuestas} />
+      <div id="linkcontacto" className="h-12" />
     </div>
   );
 }

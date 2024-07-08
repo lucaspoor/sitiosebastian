@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Hero() {
   return (
@@ -18,7 +19,7 @@ export default function Hero() {
         <div className="flex space-x-10 justify-center items-center mt-4  lg:mt-6 animate-fade animate-once animate-duration-[2000ms]">
           <a
             href="https://www.instagram.com/sebastianalvarez.cl/"
-            className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
+            className="block px-1 text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
               className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary "
@@ -34,7 +35,7 @@ export default function Hero() {
           </a>
           <a
             href="https://www.facebook.com/profile.php?id=100057363343654"
-            className="block  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
+            className="block px-1  text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
               className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary"
@@ -48,24 +49,55 @@ export default function Hero() {
               />
             </svg>
           </a>
-        </div>
-
-        <div className="flex justify-center">
-          <Link
-            href="/programa.pdf"
-            className="transition ease-in-out delay-75   hover:scale-110  duration-300 w-50 p-4 lg:px-8 lg:my-14 my-12  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-white hover:border-redprimary flex hover:text-redprimary  border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
+          <a
+            href="https://www.tiktok.com/@sebastianalvarez.cl?_t=8nr5ZRgxdBO&_r=1"
+            className="block px-1 text-gray-900 transition-all duration-500 hover:text-indigo-600 "
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-[1.5rem] h-[1.5rem] mr-2"
-              viewBox="0 0 384 512"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="w-11 h-11 lg:w-20 lg:h-20 text-white hover:text-redprimary"
+              viewBox="0 0 16 16"
+            >
+              <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z" />
+            </svg>
+          </a>
+        </div>
+
+        <div className="flex flex-col mx-auto">
+          <Link
+            href="/programa.pdf"
+            className="transition ease-in-out delay-75 group px-12   hover:scale-110  duration-300 p-4  lg:px-8 lg:my-14 mt-12  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-redprimary hover:border-redprimary  hover:text-white flex justify-center border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-7 h-6 lg:w-20 lg:h-20 mr-2 text-blueprimary group-hover:text-white duration-300 "
+              viewBox="0 0 16 16"
             >
               <path
-                fill="#4b76ba"
-                d="M369.9 97.9L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM332.1 128H256V51.9l76.1 76.1zM48 464V48h160v104c0 13.3 10.7 24 24 24h104v288H48zm250.2-143.7c-12.2-12-47-8.7-64.4-6.5-17.2-10.5-28.7-25-36.8-46.3 3.9-16.1 10.1-40.6 5.4-56-4.2-26.2-37.8-23.6-42.6-5.9-4.4 16.1-.4 38.5 7 67.1-10 23.9-24.9 56-35.4 74.4-20 10.3-47 26.2-51 46.2-3.3 15.8 26 55.2 76.1-31.2 22.4-7.4 46.8-16.5 68.4-20.1 18.9 10.2 41 17 55.8 17 25.5 0 28-28.2 17.5-38.7zm-198.1 77.8c5.1-13.7 24.5-29.5 30.4-35-19 30.3-30.4 35.7-30.4 35zm81.6-190.6c7.4 0 6.7 32.1 1.8 40.8-4.4-13.9-4.3-40.8-1.8-40.8zm-24.4 136.6c9.7-16.9 18-37 24.7-54.7 8.3 15.1 18.9 27.2 30.1 35.5-20.8 4.3-38.9 13.1-54.8 19.2zm131.6-5s-5 6-37.3-7.8c35.1-2.6 40.9 5.4 37.3 7.8z"
+                fill-rule="evenodd"
+                d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z"
               />
             </svg>
             Ver Programa de Gobierno
+          </Link>
+          <Link
+            href="#linkcontacto"
+            className="transition group ease-in-out delay-75  px-12    hover:scale-110  duration-300 w-50 p-4 lg:px-8 lg:my-14 lg:my-12 mt-4 mb-16  border-4  rounded-3xl xl font-bold bg-white border-redprimary flex text-redprimary font-arial  hover:bg-redprimary justify-center hover:border-redprimary  hover:text-white  animate-fade-up animate-once animate-duration-[2000ms]"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              className="w-7 h-6 lg:w-20 lg:h-20 mr-2 text-redprimary group-hover:text-white duration-300 "
+              viewBox="0 0 16 16"
+            >
+              <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+              <path d="M8 3.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132" />
+            </svg>
+            ¿Como te Ayudamos?
           </Link>
         </div>
       </div>

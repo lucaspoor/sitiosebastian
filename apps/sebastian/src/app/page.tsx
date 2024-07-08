@@ -5,22 +5,30 @@ import Video from './components/VIdeo';
 import Hero from './components/hero';
 import Image from 'next/image';
 import FooterTest from './components/footertest';
+import ClickToChat from './components/wspchat';
 
 export default function Index() {
   return (
     <>
-      <div className="sticky z-50 top-0 font-semibold  lg:text-xl bg-redprimary w-100 shadow-slate-800 shadow-md text-white lg:pl-14  lg:p-2 p-1  pl-7 h-8 lg:h-10">
+      <div className="sticky z-50 top-0 font-semibold flex justify-between lg:text-xl bg-redprimary w-100 shadow-slate-800 shadow-md text-white lg:pl-14  lg:p-2 p-2 px-6  h-10 lg:h-10">
         <a href="#">@sebastianalvarez.cl</a>
+        <a className="" href="#">
+          #TODOSSOMOSPUCON
+        </a>
       </div>
-      <Image
-        src="/images/votaA10.png"
-        width={100}
-        height={100}
-        alt="Picture of the author"
-        className="fixed top-0 z-50 lg:w-32 md:w-32 right-8 lg:right-24 shadow-gray-700 shadow-md"
-      />
+      <ClickToChat
+        numero="56961145578"
+        message="¡Hola! Queria hacer una consulta"
+      >
+        {' '}
+        <img
+          alt="Chat on WhatsApp"
+          src="/images/whatsapp.svg"
+          className="w-12 h-12 lg:hidden ml-[2px] "
+        ></img>
+      </ClickToChat>
 
-      <div className="w-100  bg-[#282b6a] flex m-0  justify-center pt-12 ">
+      <div className="w-100  bg-[#282b6a] flex m-0  justify-center pt-8 ">
         <Image
           src="/images/bannernombre.png"
           width={500}
@@ -37,6 +45,7 @@ export default function Index() {
 
       <SeccionTrayectoria />
       <SeccionPropuestas />
+
       <Formulario />
       <FooterTest></FooterTest>
     </>
