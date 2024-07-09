@@ -106,7 +106,7 @@ export function Formulario() {
               </div>
               <div className="flex flex-col mb-4">
                 <label htmlFor="numero" className="text-gray-600 mt-2   ">
-                  Número telefónico
+                  Número teléfonico
                 </label>
                 <Field
                   id="numero"

@@ -2,7 +2,7 @@ import { Formulario } from './components/Formulario';
 import SeccionPropuestas from './components/propuestas/SeccionPropuestas';
 import SeccionTrayectoria from './components/trayectoria/SeccionTrayectoria';
 import Video from './components/VIdeo';
-import Hero from './components/hero';
+import Hero from './components/hero/hero';
 import Image from 'next/image';
 import FooterTest from './components/footertest';
 import ClickToChat from './components/wspchat';
@@ -34,7 +34,7 @@ export default function Index() {
           width={500}
           height={200}
           alt="Picture of the author"
-          className=" m-auto p-1 lg:w-2/5 animate-fade animate-once animate-duration-[4000ms]"
+          className=" m-auto p-1 lg:w-4/12 animate-fade animate-once animate-duration-[4000ms]"
         />
       </div>
       <Hero></Hero>
