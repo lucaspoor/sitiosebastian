@@ -30,7 +30,7 @@ export function Formulario() {
     console.log({ values });
     axios({
       method: 'POST',
-      url: 'https://formspree.io//p/2431245809828756720/f/contact',
+      url: '/api/enviarcorreo',
       data: values,
     })
       .then((response) => {
