@@ -24,7 +24,7 @@ export default function Deshero() {
       style={{
         backgroundImage: desktop
           ? 'url(/images/hero/bg.png)'
-          : 'url(/images/hero/bgmov.png)',
+          : 'url(/images/hero/bgmov.webp)',
       }}
       className="w-full flex bg-contain md:flex-row flex-col-reverse md:p-6  xl:px-12 md:px-10 xl:pt-10  px-4 "
     >
