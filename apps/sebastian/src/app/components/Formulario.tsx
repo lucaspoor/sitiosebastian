@@ -10,6 +10,7 @@ const formSchema = Yup.object().shape({
     .email('Debes ingresar un email válido')
     .required('Debes ingresar un email válido'),
   message: Yup.string().required('No hay ningun mensaje'),
+  sector: Yup.string().required('Debes ingresar el sector en donde vives'),
   nombre: Yup.string().required('Debes ingresar tu nombre'),
   numero: Yup.number()
     .typeError('Debes ingresar un numero válido')
@@ -51,7 +52,7 @@ export function Formulario() {
       });
   };
   return (
-    <div className="max-w-[1200px] m-4 lg:m-auto">
+    <div className="max-w-[1400px] p-4 lg:m-auto">
       <div className="flex lg:mt-22 mt-10">
         <h1 className="mb-6 font-arial font-bold text-3xl lg:text-4xl text-redprimary">
           Queremos escucharte
@@ -60,7 +61,13 @@ export function Formulario() {
 
       <div>
         <Formik
-          initialValues={{ email: '', message: '', nombre: '', numero: '' }}
+          initialValues={{
+            email: '',
+            message: '',
+            sector: '',
+            nombre: '',
+            numero: '',
+          }}
           onSubmit={handleOnSubmit}
           validationSchema={formSchema}
         >
@@ -86,6 +93,25 @@ export function Formulario() {
                 )}
               </div>
               <div className="flex flex-col mb-4">
+                <div className="flex flex-col mb-4">
+                  <label htmlFor="email" className="text-gray-600 mt-2   ">
+                    Sector
+                  </label>
+                  <Field
+                    id="sector"
+                    type="sector"
+                    name="sector"
+                    placeholder="Ej: Palguin alto"
+                    className="p-2 mt-1 border-2 hover:border-blue-500 border-gray-400 rounded-md"
+                  />
+                  {errors.sector && touched.sector && (
+                    <ErrorMessage
+                      name="sector"
+                      className="text-redprimary 600 mt-2"
+                      component="p"
+                    />
+                  )}
+                </div>
                 <label htmlFor="email" className="text-gray-600 mt-2   ">
                   Email
                 </label>

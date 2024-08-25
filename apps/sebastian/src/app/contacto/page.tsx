@@ -1,3 +1,11 @@
+import { Formulario } from '../components/Formulario';
+import Banner from './components/banner';
+
 export default function Contacto() {
-  return <h1></h1>;
+  return (
+    <div>
+      <Banner></Banner>
+      <Formulario />
+    </div>
+  );
 }

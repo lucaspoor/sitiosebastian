@@ -29,6 +29,10 @@ export default function EmailComponent(cuerpo: any) {
             {cuerpo.nombre}
           </Text>
           <Text>
+            <strong>Sector:</strong> <br></br>
+            {cuerpo.sector}
+          </Text>
+          <Text>
             <strong>Correo de la persona:</strong> <br></br>
             {cuerpo.email}
           </Text>

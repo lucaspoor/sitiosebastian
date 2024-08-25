@@ -8,7 +8,7 @@ type ItemsSectionProps = {
 };
 export function ItemsSection({ items, color = '' }: ItemsSectionProps) {
   return (
-    <div className={`grid lg:grid-cols-3 gap-6 ${color}`}>
+    <div className={`grid lg:grid-cols-3 md:grid-cols-2 gap-6 ${color}`}>
       {items.map((p) => (
         <ItemCard item={p} key={p.id} />
       ))}

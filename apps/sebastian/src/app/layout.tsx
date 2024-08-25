@@ -1,4 +1,8 @@
+import Link from 'next/link';
 import './global.css';
+import Image from 'next/image';
+import FooterTest from './components/footertest';
+import Navbar from './components/navbar';
 
 export const metadata = {
   title: 'Sebastian Álvarez',
@@ -12,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        {' '}
+        <Navbar></Navbar>
+        {children}
+        <FooterTest></FooterTest>
+      </body>
     </html>
   );
 }
