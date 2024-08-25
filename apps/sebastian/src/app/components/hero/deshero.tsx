@@ -51,7 +51,7 @@ export default function Deshero() {
           }
           width={1336}
           height={1336}
-          className="md:w-10/12 w-full py-8 animate-fade-up "
+          className="md:w-10/12 w-full py-8 md:pt-8 pt-2 animate-fade-up "
           alt="Picture of the author"
         />
       </div>
