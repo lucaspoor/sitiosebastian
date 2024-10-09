@@ -84,7 +84,7 @@ export default function Deshero() {
               ></ButtonHero>
               <ButtonHero
                 texto="Ver Programa de Gobierno"
-                link="/programa.pdf"
+                link="/programafinal.pdf"
                 css="bg-blueprimary hover:bg-blue-400"
               ></ButtonHero>
             </div>

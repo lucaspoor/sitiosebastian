@@ -20,6 +20,14 @@ export default function Navbar() {
         >
           Contáctanos
         </Link>
+
+        <Image
+          src={'/images/hero/z52.png'}
+          width={400}
+          height={500}
+          alt={''}
+          className="w-20 absolute top-14 right-10 lg:w-28 lg:top-20 lg:right-14 xl:right-16 "
+        ></Image>
       </div>
     </div>
   );

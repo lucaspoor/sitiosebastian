@@ -54,7 +54,7 @@ export default function Hero() {
             ¿Como te Ayudamos? Contáctanos
           </Link>
           <Link
-            href="/programa.pdf"
+            href="/programafinal.pdf"
             className="transition ease-in-out delay-75 group px-12 mb-16  lg:text-xl lg:mx-4   hover:scale-110  duration-300 p-4  lg:px-8 lg:my-14 mt-4  border-4 bg-black bg-opacity-30 rounded-3xl xl font-bold hover:bg-redprimary hover:border-redprimary  hover:text-white flex justify-center border-white font-arial text-white animate-fade-up animate-once animate-duration-[2000ms]"
           >
             <svg
